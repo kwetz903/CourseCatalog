@@ -1,0 +1,23 @@
+{%load static%}
+
+<link rel="stylesheet" type="text/css" href="{%static 'courses/style.css' %}" />
+<div id="nav">
+	<ul>
+		<li>Programming Django</li>
+		<li><a href="{% url 'courses:index' %}">Course Catalog</a></li>
+		<li><a href="{% url 'courses:add' %}">Add Course</a></li>
+	</ul>
+</div>
+
+<h1>{{course.title}}</h1>
+<form action="/courses/{{course.id}}/change" id="change" >
+	<input type="submit" value="Change"/>
+</form>
+
+<h3>{{course.description}}</h3>
+
+<img src="{{MEDIA_URL}}/{{course.art.url}}" width="300"/>
+<ul id="details">
+	<li>Instructor: {{course.instructor}}</li>
+	<li>Duration: {{course.duration}} Weeks</p></li>
+</ul>

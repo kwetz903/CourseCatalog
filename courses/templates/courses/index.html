@@ -1,0 +1,36 @@
+{%load static%}
+
+<link rel="stylesheet" type="text/css" href="{%static 'courses/style.css' %}" />
+<div id="nav">
+	<ul>
+		<li>Programming Django</li>
+		<li><a href="{% url 'courses:index' %}">Course Catalog</a></li>
+		<li><a href="{% url 'courses:add' %}">Add Course</a></li>
+	</ul>
+</div>
+
+{% if course_list %}
+	<h1>Django Course Catalog</h1>
+	<p>Please select from our awesome courses!</p>
+	<table id="c_list">
+	   <tr>
+		<th>#</th>
+		<th>Course Title</th>
+		<th>Instructor</th>
+		<th>Duration</th>
+		<th></th>
+	   </tr>
+	{% for course in course_list %}
+	   <tr>	
+		<td>{{course.id}}</td>
+		<td><a href="{% url 'courses:detail' course.id%}">{{course.title}}</a></td>
+		<td>{{course.instructor}}</td>
+		<td>{{course.duration}} weeks</td>
+		<td><a href="{% url 'courses:edit' course.id%}">Edit</a></td>
+	   </tr>
+	{%endfor%}
+	</table>
+
+{% else %}
+	<p>No courses are available.</p>
+{% endif %}

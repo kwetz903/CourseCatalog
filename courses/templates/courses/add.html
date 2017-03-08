@@ -1,0 +1,24 @@
+{%load static%}
+
+<link rel="stylesheet" type="text/css" href="{%static 'courses/style.css' %}" />
+<div id="nav">
+	<ul>
+		<li>Programming Django</li>
+		<li><a href="{% url 'courses:index' %}">Course Catalog</a></li>
+		<li><a href="{% url 'courses:add' %}">Add Course</a></li>
+	</ul>
+</div>
+
+<h1>Add Course</h1>
+
+<form action="" method="post" enctype="multipart/form-data">{% csrf_token %}
+	<ul id="form">
+		{{form.as_ul}}
+	</ul>
+
+<div class="right">
+	<input type="submit" value="Save"> or <a href="{% url 'courses:index' %}">Cancel</a>
+</div>
+
+</form>
+

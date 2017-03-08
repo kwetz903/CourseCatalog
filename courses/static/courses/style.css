@@ -1,0 +1,106 @@
+html * {
+	font-family: Helvetica;
+}
+
+a{
+	color: #2eb8b8;
+	text-decoration:none;
+}
+
+img {
+	float: left;
+}
+
+h1{
+	font-size: 40px;
+	display: inline-block;
+}
+
+.right{
+	text-align: right;
+	padding: 15px;
+}
+
+#change{
+	
+	display: inline-block;
+	float:right;
+	padding: 50px;
+}
+
+#details{
+	display: inline-block;
+	margin: 40px;
+
+}
+
+#helptext{
+	padding-left:90px;
+	color: grey;
+}
+
+/*nav bar styles*/
+#nav {
+    z-index: 2000
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    padding: 15px;
+    border-bottom: solid 1px #e3e2e1;
+    background-color: #fff;
+}
+
+#nav a {
+    color: black;
+    text-decoration: none;
+}
+
+#nav ul {
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+#nav li {
+    display: inline;
+}
+
+#nav li a {
+    padding: 0px 25px;
+}
+
+/*course list styles*/
+#c_list{
+	width: 100%;
+	padding: 0px 30px;
+}
+
+#c_list th, td{
+	padding: 15px;
+}
+
+#c_list th{
+	text-align:left;
+}
+
+table{
+	border-collapse: collapse;
+}
+
+#c_list tr:nth-child(even) {
+    background-color: #eee;
+    border-bottom: solid 1px #c9c6c5;
+}
+#c_list tr:nth-child(odd) {
+    border-bottom: solid 1px #c9c6c5;
+}
+
+/*search form styles*/
+
+
+#form li {
+	list-style-type:none;
+	padding: 15px;
+}
